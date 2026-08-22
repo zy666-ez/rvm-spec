@@ -1,0 +1,25 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ===== IDE =====
+.idea/
+.vscode/
+
+# ===== 临时文件 =====
+~$*
+*.tmp
+*.log
+
+# ===== 模型权重（单文件超 GitHub 100MB 限制，需自行下载）=====
+RobustVideoMatting/weights/
+
+# ===== 测试媒体文件（不纳入版本控制）=====
+/com.mp4
+/fgr.mp4
+/input.mp4
+/pha.mp4
+/input.png
