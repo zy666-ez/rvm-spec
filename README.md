@@ -73,13 +73,11 @@ rvm-spec2/
 │           ├── ControlBar.vue
 │           └── MetricsToast.vue
 ├── rvm_run_live.py        # 桌面端实时预览（cv2 窗口 + 键盘交互），独立于 Web 栈
-├── app.py                 # Streamlit 实验工作台（Alpha 可视化 + 参数调优）
 ├── rvm-run.py             # 离线视频抠图（调用 RVM 官方 convert_video）
 ├── background/            # 背景图片 / 视频素材（自动扫描）
 ├── RobustVideoMatting/    # RVM 基础模型（第三方，来自论文作者）
 │   ├── model/             # MattingNetwork (mobilenetv3 / resnet50)
 │   └── weights/           # 权重文件需自行下载（见「快速开始」）
-├── legacy/                # 旧版 Flask + Jinja 实现（server.py / templates/），仅作参考
 └── requirements.txt       # Python 依赖（torch / opencv / numpy 等）
 ```
 
@@ -139,7 +137,6 @@ npm run build        # 产物输出到 frontend/dist
 ### 其它运行模式（与 Web 栈独立，未改动）
 - **桌面端（OpenCV 实时窗口）**：`python rvm_run_live.py` —— W/S 切换背景，V 虚化，N 现实背景，R 记录 100 帧指标，Q 退出
 - **离线视频抠图**：`python rvm-run.py` —— 输入 `input.mp4` → 输出 `com.mp4` / `pha.mp4` / `fgr.mp4`
-- **Streamlit 实验工作台**：`streamlit run app.py`
 
 将背景图片（`.jpg/.png/.bmp`）或视频（`.mp4/.avi/.mov`）放入 `background/` 文件夹，启动时自动扫描。
 
