@@ -23,3 +23,6 @@ RobustVideoMatting/weights/
 /input.mp4
 /pha.mp4
 /input.png
+
+# ===== WorkBuddy 内部目录（记忆/工作区，不纳入版本控制）=====
+.workbuddy/
