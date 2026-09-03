@@ -86,6 +86,9 @@ class RVMPipeline:
         self.cap = cv2.VideoCapture(camera_id)
         if not self.cap.isOpened():
             raise RuntimeError(f"无法打开摄像头 (id={camera_id})")
+        # 提升推流清晰度：优先 1280x720（失败则保留摄像头默认分辨率）
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
         # ── 背景 ──
         self.bg_folder = bg_folder
